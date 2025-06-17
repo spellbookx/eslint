@@ -1,5 +1,5 @@
 {
-  "name": "config",
+  "name": "@spellbookx/eslint-config",
   "version": "1.0.0",
   "description": "A ready to use eslint config for a curated list of languages and file types.",
   "main": "index.js",
