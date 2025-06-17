@@ -1,8 +1,10 @@
 {
-  "name": "@spellbookx/eslint",
+  "name": "config",
   "version": "1.0.0",
-  "description": "Spellbookx ESLint configuration",
-  "private": true,
+  "description": "A ready to use eslint config for a curated list of languages and file types.",
+  "main": "index.js",
+  "author": "Davide Di Criscito <davide.dicriscito@gmail.com>",
+  "license": "MIT",
   "keywords": [
     "eslint",
     "eslint-config",
@@ -17,9 +19,10 @@
     "json5",
     "stylistic"
   ],
-  "author": "Davide Di Criscito <davide.dicriscito@gmail.com>",
-  "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "test": "depcheck"
+  },
+  "packageManager": "pnpm@10.12.1",
   "dependencies": {
     "@eslint/js": "^9.29.0",
     "@eslint/json": "^0.12.0",
@@ -31,22 +34,9 @@
     "typescript-eslint": "^8.34.1"
   },
   "devDependencies": {
-    "@commitlint/cli": "^19.8.1",
-    "@commitlint/config-conventional": "^19.8.1",
-    "@types/node": "^24.0.3",
-    "commitizen": "^4.3.1",
-    "cz-conventional-changelog": "^3.3.0",
-    "depcheck": "^1.4.7",
-    "eslint": "^9.29.0",
-    "lefthook": "^1.11.14"
+    "eslint": "^9.29.0"
   },
   "peerDependencies": {
     "eslint": "^9.29.0"
-  },
-  "packageManager": "pnpm@10.12.1",
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }

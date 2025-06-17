@@ -1,3 +1,11 @@
-linkWorkspacePackages: true
-sideEffectsCache: false
+packages:
+  - packages/*
+
 includeWorkspaceRoot: true
+
+linkWorkspacePackages: true
+
+onlyBuiltDependencies:
+  - lefthook
+
+sideEffectsCache: false

@@ -1,7 +1,7 @@
-import javascript from './eslint/javascript.mjs'
-import markdown from './eslint/markdown.mjs'
-import json from './eslint/json.mjs'
-import stylistic from './eslint/stylistic.mjs'
+import javascript from './lib/javascript.mjs'
+import markdown from './lib/markdown.mjs'
+import json from './lib/json.mjs'
+import stylistic from './lib/stylistic.mjs'
 
 export default [
   {
