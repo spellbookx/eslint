@@ -33,6 +33,7 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@spellbookx/eslint-config": "workspace:^",
     "@types/node": "^24.0.3",
     "commitizen": "^4.3.1",
     "cz-conventional-changelog": "^3.3.0",
