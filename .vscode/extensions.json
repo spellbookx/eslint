@@ -1,0 +1,18 @@
+{
+  "recommendations": [
+    "editorconfig.editorconfig",
+    "google.geminicodeassist",
+    "vivaxy.vscode-conventional-commits",
+    "joshbolduc.commitlint",
+    "dbaeumer.vscode-eslint",
+    "visualstudioexptteam.vscodeintellicode",
+    "christian-kohler.path-intellisense",
+    "dragi-ns.paste-fix",
+    "github.vscode-pull-request-github",
+    "github.vscode-github-actions",
+    "github.remotehub"
+  ],
+  "unwantedRecommendations": [
+    "esbenp.prettier-vscode"
+  ]
+}
