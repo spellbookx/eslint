@@ -1,13 +1,12 @@
 import markdown from '@eslint/markdown'
 import { defineConfig } from 'eslint/config'
 
-/** @type {import('eslint').Linter.Config[]} */
-export default defineConfig([
+export const configMarkdown = defineConfig([
   {
-    name: "@spellbookx/eslint-markdown-config",
+    name: "recommended/markdown",
     files: ['**/*.md'],
     plugins: {
-      markdown,
+      markdown: markdown,
     },
     language: 'markdown/gfm',
     languageOptions: {
@@ -17,4 +16,6 @@ export default defineConfig([
       'no-irregular-whitespace': 'off',
     },
   }
-])
+]);
+
+export default configMarkdown;

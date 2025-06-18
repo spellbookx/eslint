@@ -19,12 +19,13 @@
     "stylistic"
   ],
   "type": "module",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "exports": {
-    ".": "./index.js",
+    ".": "./lib/index.js",
     "./config/global.js": "./lib/global.js",
     "./config/eslint-config.js": "./lib/eslint-config.js",
     "./config-javascript.js": "./lib/javascript.js",
+    "./config-typescript.js": "./lib/typescript.js",
     "./config-json.js": "./lib/json.js",
     "./config-markdown.js": "./lib/markdown.js",
     "./config-stylistic.js": "./lib/stylistic.js",

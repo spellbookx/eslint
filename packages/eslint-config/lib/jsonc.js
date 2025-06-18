@@ -1,12 +1,13 @@
 import { defineConfig } from 'eslint/config'
 import json from '@eslint/json'
 
-export const configJson = defineConfig([
+export const configJsonc = defineConfig([
   {
-    name: "recommended/json",
-    files: ['**/*.json'],
+    name: "recommended/jsonc",
+    files: ['**/*.jsonc', '**/tsconfig*.json',
+      '.vscode/*.json'],
     plugins: { json },
-    language: 'json/json',
+    language: 'json/jsonc',
     rules: {
       'no-irregular-whitespace': 'off',
       'json/no-duplicate-keys': 'error',
@@ -14,4 +15,4 @@ export const configJson = defineConfig([
   }
 ]);
 
-export default configJson;
+export default configJsonc;

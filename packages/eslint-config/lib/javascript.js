@@ -1,6 +1,7 @@
 import stylistic from '@stylistic/eslint-plugin'
 import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
+import importPlugin from 'eslint-plugin-import';
 
 export const configJavascript = defineConfig([
   {
@@ -10,9 +11,14 @@ export const configJavascript = defineConfig([
     js.configs.recommended,
     stylistic.configs.recommended,
   ],
+  plugins: {
+    '@stylistic': stylistic,
+    'import': importPlugin,
+  },
   rules: {
     'no-irregular-whitespace': 'off',
       '@stylistic/array-element-newline': ['error', 'consistent'],
+      'import/prefer-default-export': 'off',
     "sort-imports": ["error", {
         "ignoreCase": false,
         "ignoreDeclarationSort": false,
@@ -23,3 +29,5 @@ export const configJavascript = defineConfig([
   }
   },
 ])
+
+export default configJavascript

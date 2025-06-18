@@ -1,15 +1,23 @@
 import tseslint, { configs } from 'typescript-eslint'
 import js from '@eslint/js';
+import stylistic from '@stylistic/eslint-plugin'
+import importPlugin from "eslint-plugin-import";
 
-/** @type {import('typescript-eslint').Config} */
-export default tseslint.config({
-  name: 'recommended/js-ts',
-  files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
+export const configTypescript = tseslint.config({
+  name: 'recommended/ts',
+  files: ['**/*.{ts,mts,cts}'],
   extends: [
     js.configs.recommended,
   configs.recommended,
-  configs.strictTypeChecked
+  configs.strictTypeChecked,
+  stylistic.configs.recommended,
+  configs.stylisticTypeChecked,
   ],
+  plugins: {
+    '@typescript-eslint': tseslint.plugin,
+    '@stylistic': stylistic,
+    'import': importPlugin,
+  },
   settings: {
     'import/resolver': {
       typescript: true,
@@ -17,9 +25,11 @@ export default tseslint.config({
     },
   },
   rules: {
+    'no-irregular-whitespace': 'off',
     'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
     'import/no-duplicates': 'error',
     '@typescript-eslint/no-import-type-side-effects': 'error',
+    '@stylistic/array-element-newline': ['error', 'consistent'],
     "sort-imports": ["error", {
         "ignoreCase": false,
         "ignoreDeclarationSort": false,
@@ -29,3 +39,5 @@ export default tseslint.config({
     }]
   },
 })
+
+export default configTypescript;
