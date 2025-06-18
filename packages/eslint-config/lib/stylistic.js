@@ -1,7 +1,10 @@
 import stylistic from '@stylistic/eslint-plugin'
+import { defineConfig } from 'eslint/config'
 
-export default [
+/** @type {import('eslint').Linter.Config[]} */
+export default defineConfig([
   {
+    name: '@spellbookx/eslint-stylistic-config',
     // Scope stylistic rules to JS/TS files only
     files: ['**/*.{js,mjs,cjs,ts,mts,cts}'],
     plugins: {
@@ -14,4 +17,4 @@ export default [
       '@stylistic/array-element-newline': ['error', 'consistent'],
     },
   },
-]
+])

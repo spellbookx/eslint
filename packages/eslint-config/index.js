@@ -1,24 +1,15 @@
-import javascript from './lib/javascript.mjs'
-import markdown from './lib/markdown.mjs'
-import json from './lib/json.mjs'
-import stylistic from './lib/stylistic.mjs'
+import javascript from './lib/javascript.js'
+import markdown from './lib/markdown.js'
+import json from './lib/json.js'
+import stylistic from './lib/stylistic.js'
+import { defineConfig } from 'eslint/config'
+import { configGlobalIgnores } from 'lib/global-ignores.js'
+import configEslintConfigFile from 'lib/eslint-config.js'
 
-export default [
-  {
-    ignores: [
-      '**/node_modules/**',
-      '**/dist/**',
-      '**/package-lock.json',
-      '**/package.json',
-      'pnpm-lock.yaml',
-    ],
-  },
-  {
-    files: ['**/eslint.config.{js,cjs,mjs,ts,mts,cts}'],
-    rules: {
-      'import/no-unresolved': 'off',
-    },
-  },
+/** @type {import('eslint').Linter.Config[]} */
+export default defineConfig([
+  configGlobalIgnores,
+  configEslintConfigFile,
   {
     files: ['**/*.json',
       '**/*.jsonc',
@@ -27,8 +18,8 @@ export default [
       'no-irregular-whitespace': 'off',
     },
   },
-  ...stylistic,
-  ...javascript,
+  stylistic,
+  javascript,
   ...json,
   ...markdown,
   {
@@ -36,4 +27,4 @@ export default [
       'no-irregular-whitespace': 'off',
     },
   },
-]
+])

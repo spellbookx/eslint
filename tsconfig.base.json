@@ -1,6 +1,8 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
+  "compileOnSave": false /* Disable IDE auto-compilation; builds handled by tooling. */,
   "compilerOptions": {
+    "composite": true, /* Enable project compilation */
     /* Language and Environment */
     "target": "ES2022", /* Set the JavaScript language version for emitted JavaScript. */
     "lib": [
@@ -10,11 +12,13 @@
     "experimentalDecorators": true, /* Enable experimental support for TC39 decorators. */
     "emitDecoratorMetadata": true, /* Emit design-type metadata for decorated declarations. */
     "resolveJsonModule": true, /* Enable importing .json files. */
+    "allowJs": true, /* Allow JavaScript files to be compiled. */
+    "checkJs": true, /* Report errors in .js files (works with allowJs). */
 
     /* Modules */
     // Explicitly set module system to ESNext or Node16/NodeNext for full ESM support.
     // NodeNext is generally recommended for modern Node.js projects.
-    "module": "ESNext", // Or "Node16", "NodeNext" depending on your target runtime
+    "module": "nodenext", // Or "Node16", "NodeNext" depending on your target runtime
     // For module resolution, 'Node16' or 'NodeNext' is preferred for ESM in Node.js,
     // as it fully understands package.json "exports" and file extensions.
     "moduleResolution": "NodeNext", // Or "Node16"
@@ -24,6 +28,10 @@
       /* "@shared/*": ["./libs/shared/*"] */
     },
     "verbatimModuleSyntax": true, /* Ensure emitted JS matches TS import/export syntax exactly. */
+    "typeRoots": [
+      "./node_modules/@types",
+      "./types" /* Add root types directory for custom global/shared types */
+    ],
     "types": ["node"], // Still include 'node' types for Node.js environments
 
     /* Type Checking */
@@ -47,12 +55,16 @@
     "allowUnreachableCode": false,
 
     /* Emit */
+    "outDir": "types", /* Redirect output structure to the directory. */
+    "rootDir": ".", /* Specify the root directory of input files. */
     "declaration": true, /* Generate .d.ts files. */
     "declarationMap": true, /* Create sourcemaps for d.ts files. */
     "sourceMap": true, /* Create source map files for emitted JavaScript files. */
     "inlineSources": true, /* Include source code in sourcemaps. */
     "removeComments": false, /* Disable emitting comments. */
     "noEmitOnError": true, /* Disable emitting files if errors occur. */
+    "noEmit": false, /* Emit output files (this is the default when outDir or declaration is set). */
+
 
     /* Interop Constraints - REVISITED for ESM */
     // 'esModuleInterop' and 'allowSyntheticDefaultImports' are typically for CJS-ESM interop.
@@ -67,5 +79,6 @@
 
     /* Completeness */
     "skipLibCheck": true /* Skip type checking all .d.ts files. */
-  }
+  },
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
 }

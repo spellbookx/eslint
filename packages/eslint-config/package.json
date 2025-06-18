@@ -2,9 +2,8 @@
   "name": "@spellbookx/eslint-config",
   "version": "1.0.0",
   "description": "A ready to use eslint config for a curated list of languages and file types.",
-  "main": "index.js",
-  "author": "Davide Di Criscito <davide.dicriscito@gmail.com>",
   "license": "MIT",
+  "author": "Davide Di Criscito <davide.dicriscito@gmail.com>",
   "keywords": [
     "eslint",
     "eslint-config",
@@ -19,6 +18,21 @@
     "json5",
     "stylistic"
   ],
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./config/global.js": "./lib/global.js",
+    "./config/eslint-config.js": "./lib/eslint-config.js",
+    "./config-javascript.js": "./lib/javascript.js",
+    "./config-json.js": "./lib/json.js",
+    "./config-markdown.js": "./lib/markdown.js",
+    "./config-stylistic.js": "./lib/stylistic.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE"
+  ],
   "scripts": {
     "test": "depcheck"
   },
@@ -30,14 +44,15 @@
     "@stylistic/eslint-plugin": "^4.4.1",
     "eslint-import-resolver-typescript": "^4.4.3",
     "eslint-plugin-import": "^2.31.0",
-    "typescript": "^5.8.3",
     "typescript-eslint": "^8.34.1"
   },
   "devDependencies": {
-    "eslint": "^9.29.0"
+    "eslint": "^9.29.0",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.29.0"
+    "eslint": "^9.29.0",
+    "typescript": "^5.8.3"
   },
   "publishConfig": {
     "access": "public"

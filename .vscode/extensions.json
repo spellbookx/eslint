@@ -10,7 +10,9 @@
     "dragi-ns.paste-fix",
     "github.vscode-pull-request-github",
     "github.vscode-github-actions",
-    "github.remotehub"
+    "github.remotehub",
+    "christian-kohler.npm-intellisense",
+    "nrwl.angular-console"
   ],
   "unwantedRecommendations": [
     "esbenp.prettier-vscode"

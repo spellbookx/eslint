@@ -1,8 +1,8 @@
 {
   "name": "@spellbookx/eslint",
-  "version": "1.0.1",
   "description": "Spellbookx ESLint configuration",
   "private": true,
+  "type": "module",
   "keywords": [
     "eslint",
     "eslint-config",
@@ -19,15 +19,16 @@
   ],
   "author": "Davide Di Criscito <davide.dicriscito@gmail.com>",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "check:deps": "depcheck --ignore-dirs dist,build,coverage,es,lib-esm,esm,types",
+    "build:types": "pnpm exec tsc --build --verbose"
+  },
   "dependencies": {
     "@eslint/js": "^9.29.0",
     "@eslint/json": "^0.12.0",
     "@eslint/markdown": "^6.5.0",
     "@stylistic/eslint-plugin": "^4.4.1",
     "eslint-import-resolver-typescript": "^4.4.3",
-    "eslint-plugin-import": "^2.31.0",
-    "typescript": "^5.8.3",
     "typescript-eslint": "^8.34.1"
   },
   "devDependencies": {
@@ -40,10 +41,12 @@
     "depcheck": "^1.4.7",
     "eslint": "^9.29.0",
     "lefthook": "^1.11.14",
-    "release-please": "^17.1.0"
+    "lerna": "^8.2.2",
+    "typescript": "^5.8.3"
   },
   "peerDependencies": {
-    "eslint": "^9.29.0"
+    "eslint": "^9.29.0",
+    "typescript": "^5.8.3"
   },
   "packageManager": "pnpm@10.12.1",
   "config": {

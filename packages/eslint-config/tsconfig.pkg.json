@@ -1,0 +1,17 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    /* Modules */
+    "typeRoots": [
+      "../../node_modules/@types",
+      "./types" /* Add root types directory for custom global/shared types */
+    ],
+    "types": ["node"],
+
+    /* Emit */
+    "outDir": "types", /* Redirect output structure to the directory. */
+    "rootDir": ".", /* Specify the root directory of input files. */
+    "baseUrl": "." /* Set base URL for module resolution within the package. */
+  }
+}
