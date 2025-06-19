@@ -18,5 +18,4 @@ export default defineConfig([
   configJsonc,
   configJson5,
   configMarkdown
-  
 ])

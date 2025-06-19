@@ -1,0 +1,20 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "readonly": true,
+  "enabled": true,
+  "loadDefaultConfiguration": true,
+  "enableGlobDot": true,
+  "useGitignore": true,
+  "allowCompoundWords": true,
+  "caseSensitive": true,
+  "ignorePaths": ["pnpm-lock.yaml", "*.log", "LICENSE"],
+  "import": [
+    "./.config/cspell/language-settings.json",
+    "./.config/cspell/default.json",
+    "./.config/cspell/featured-dicts/general.json",
+    "./.config/cspell/featured-dicts/programming-languages.json",
+    "./.config/cspell/featured-dicts/misc.json",
+    "./.config/cspell/custom-dicts.json",
+  ],
+}

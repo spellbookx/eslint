@@ -12,7 +12,8 @@
     "github.vscode-github-actions",
     "github.remotehub",
     "christian-kohler.npm-intellisense",
-    "nrwl.angular-console"
+    "nrwl.angular-console",
+    "streetsidesoftware.code-spell-checker"
   ],
   "unwantedRecommendations": [
     "esbenp.prettier-vscode"

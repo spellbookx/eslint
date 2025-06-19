@@ -1,0 +1,23 @@
+{
+  "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+  "version": "0.2",
+  "readonly": true,
+  "dictionaries": [
+    "devIntegrations",
+    "workspace",
+  ],
+  "dictionaryDefinitions": [
+    {
+      "name": "devIntegrations",
+      "path": "./custom-dicts/devIntegrations.txt",
+      "addWords": true,
+      "useCompounds": true
+    },
+    {
+      "name": "workspace",
+      "path": "./custom-dicts/workspace.txt",
+      "addWords": true,
+      "useCompounds": true
+    }
+  ]
+}

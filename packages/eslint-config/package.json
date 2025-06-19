@@ -35,7 +35,7 @@
     "LICENSE"
   ],
   "scripts": {
-    "test": "depcheck"
+    "build:types": "pnpm exec tsc --build --verbose"
   },
   "packageManager": "pnpm@10.12.1",
   "dependencies": {
