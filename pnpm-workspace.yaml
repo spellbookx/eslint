@@ -1,0 +1,12 @@
+packages:
+  - packages/*
+
+includeWorkspaceRoot: true
+
+linkWorkspacePackages: true
+
+onlyBuiltDependencies:
+  - lefthook
+  - nx
+
+sideEffectsCache: false

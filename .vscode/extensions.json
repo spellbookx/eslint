@@ -1,0 +1,19 @@
+{
+    "recommendations": [
+        "github.remotehub",
+        "ms-vscode.remote-repositories",
+        "ms-vscode-remote.remote-wsl",
+        "streetsidesoftware.code-spell-checker",
+        "joshbolduc.commitlint",
+        "vivaxy.vscode-conventional-commits",
+        "editorconfig.editorconfig",
+        "dbaeumer.vscode-eslint",
+        "github.vscode-github-actions",
+        "github.vscode-pull-request-github",
+        "visualstudioexptteam.vscodeintellicode",
+        "christian-kohler.npm-intellisense",
+        "nrwl.angular-console",
+        "dragi-ns.paste-fix",
+        "christian-kohler.path-intellisense"
+    ]
+}

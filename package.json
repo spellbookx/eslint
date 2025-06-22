@@ -1,0 +1,17 @@
+{
+  "name": "root",
+  "private": true,
+  "scripts": {
+    "prepare": "pnpm lefthook install"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@spellbookx/cspell-config": "^0.1.2",
+    "commitizen": "^4.3.1",
+    "cspell": "^9.1.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "lefthook": "^1.11.14",
+    "lerna": "^8.2.2"
+  }
+}
