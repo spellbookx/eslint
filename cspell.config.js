@@ -1,3 +1,3 @@
-import config from '@spellbookx/cspell-config';
+import config from '@spellbookx/cspell-config'
 
-export default config;
+export default config
