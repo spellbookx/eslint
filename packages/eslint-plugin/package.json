@@ -1,6 +1,6 @@
 {
   "name": "@spellbookx/eslint-plugin",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "spellbookx eslint plugin",
   "keywords": [
     "spellbookx",
