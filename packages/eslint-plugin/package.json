@@ -15,7 +15,7 @@
   "main": "lib/index.js",
   "module": "lib/index.js",
   "directories": {
-    "lib": "dist"
+    "lib": "lib"
   },
   "files": [
     "dist",
